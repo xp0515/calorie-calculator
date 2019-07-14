@@ -1,0 +1,35 @@
+.spcae {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  margin-left: -45px;
+  padding: 10px;
+}
+
+.col-md-4 {
+  max-height: 30px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.col-md-5 {
+  max-height: 70px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.row {
+  max-height: 70px;
+}
+
+.up {
+  position: relative;
+  bottom: 10px;
+}
+
+.down {
+  position: relative;
+  top: 10px;
+}

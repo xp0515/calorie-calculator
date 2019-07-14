@@ -1,0 +1,48 @@
+<div>
+  <img src="{{selectedFood.photo.thumb}}">
+  <p class="capitalize"> {{selectedFood.food_name}} </p>
+</div>
+<mat-divider></mat-divider>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <p class="first purple"><small>Servings</small></p>
+      <p-spinner size="8" [min]="0" [(ngModel)]="servings" [formatInput]="true" decimalSeparator="."
+        (ngModelChange)="reCalculate(servings)">
+      </p-spinner>
+      <div class="up">
+        <p class="purple"><small>{{selectedFood.serving_unit}}</small></p>
+      </div>
+    </div>
+    <div *ngIf="commonFood&&calorie" class="row">
+      <div class="col-3">
+        <h5>{{ calorie.grams}}</h5> <br />
+        <div class="grey">
+          <small>grams</small></div>
+      </div>
+      <div class="col-3">
+        <h5> {{calorie.calories}}</h5> <br />
+        <div class="grey">
+          <small>calories</small></div>
+      </div>
+    </div>
+    <div class="row" *ngIf="brandedFood">
+      <div class="col-3">
+        <h5> {{brandedFood.nf_calories}}</h5> <br />
+        <div class="grey">
+          <small>calories</small></div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<div class="container">
+  <div class="col left">
+    <p>ADD TO TODAY</p>
+    <p-dropdown [options]="meal" [(ngModel)]="selectedMeal" appendTo="body" placeholder="Select a meal"></p-dropdown>
+  </div>
+  <div class="col align-self-end right">
+    <button pButton type="button" label="ADD" (click)="addFood(selectedMeal)"></button>
+  </div>
+</div>

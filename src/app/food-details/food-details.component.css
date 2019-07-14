@@ -1,0 +1,39 @@
+img {
+  height: 80px;
+  width: 80px;
+}
+
+.col-6 {
+  right: 20px;
+}
+
+.col-3 {
+  top: 20px;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+.grey {
+  position: relative;
+  bottom: 35px;
+}
+
+
+.up {
+  bottom: 20px;
+  position: relative;
+}
+
+.left {
+  right: 30px;
+}
+
+body .ui-inputtext {
+  background: lightgrey;
+}
+
+.right {
+  left: 158px;
+}

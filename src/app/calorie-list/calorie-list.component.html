@@ -1,0 +1,41 @@
+<div class="container-fluid" *ngFor="let food of foodList">
+  <div class="row" style="margin: 0 auto;">
+    <div class="col-md-1">
+      <img src="{{food.thumb}}" style="width: 70px; height: 70px;" />
+    </div>
+    <div class="col-md-6">
+      <p class="text-left capitalize down">
+        <strong> {{food.food_name}} </strong>
+      </p>
+      <div class="row">
+        <div class="col-md-1 up grey">
+          <p><small>
+              {{food.serving_qty}}</small>
+          </p>
+        </div>
+        <div class="col-md-6 up grey">
+          <p><small>
+              {{food.serving_unit}}</small>
+          </p>
+        </div>
+        <div class="col-md-1 up grey">
+          <p><small>
+              ({{food.serving_weight_grams}}g)</small>
+          </p>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-1">
+    </div> -->
+    <div class="col-md-5">
+      <p class="text-right down">
+        <strong> {{food.nf_calories}} cal </strong>
+      </p>
+      <p class="text-right capitalize up grey"><small>
+          {{food.meal_type}}</small>
+      </p>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</div>

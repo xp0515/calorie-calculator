@@ -1,0 +1,28 @@
+<div mat-dialog-content>
+  <div>
+    <p>COMMON</p>
+    <mat-nav-list *ngIf="commonFoodList.length">
+      <div mat-list-item *ngFor="let commonFood of commonFoodList">
+        <p class="capitalize" (click)="searchFoodDetails(commonFood)"><img matListAvatar
+            src="{{commonFood.photo.thumb}}">
+          {{ commonFood.food_name }} </p>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-nav-list>
+  </div>
+
+  <div>
+    <p>BRANDED</p>
+    <mat-nav-list *ngIf="brandedFoodList.length">
+      <div class="wrapper" mat-list-item *ngFor="let brandedFood of brandedFoodList">
+        <p class="capitalize" (click)="searchFoodDetails(brandedFood)"><img matListAvatar
+            src="{{brandedFood.photo.thumb}}">
+          {{ brandedFood.food_name }} <br />
+          {{ brandedFood.brand_name }}
+        </p>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-nav-list>
+  </div>
+
+</div>

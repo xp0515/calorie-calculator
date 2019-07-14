@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="ui-g" id="top">
+    <div class="ui-g-3 circle" id="kg">
+      57<br />
+      <p>kg</p>
+    </div>
+    <div class="userphoto">
+      <div class="ui-g-6 ">
+      </div>
+    </div>
+    <div class="ui-g-3 circle" id="cm">
+      163<br />
+      <p>cm</p>
+    </div>
+  </div>
+  <div class="ui-g">
+    <h5 id="name">Jane Appleseed</h5>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div>
+    <div class="justify">
+      <h5>{{totalCalories}} cal</h5>
+      <h5>1500 cal</h5>
+    </div>
+    <div class="justify small">
+      <p>consumed</p>
+      <p>daily goal</p>
+    </div>
+    <mat-progress-bar [value]="progressValue"></mat-progress-bar>
+    <div class="textcenter">
+      {{progressValue}}%
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>{{breakfastCalories}} <br /></h5>
+        <p><small>Breakfast</small></p>
+      </div>
+      <div class="col-md-3">
+        <h5> {{lunchCalories}} <br /></h5>
+        <p><small> Lunch</small></p>
+      </div>
+      <div class="col-md-3">
+        <h5> {{dinnerCalories}} <br /></h5>
+        <p><small> Dinner</small></p>
+      </div>
+      <div class="col-md-3">
+        <h5> {{snackCalories}} <br /></h5>
+        <p><small> Snack</small></p>
+      </div>
+    </div>
+  </div>
+</div>

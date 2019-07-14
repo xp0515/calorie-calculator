@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="input-group mb-3 col-md-6 center">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <mat-icon class="center" (click)="searchFoods(food)">search</mat-icon>
+        </span>
+      </div>
+      <input type="text" class="form-control" placeholder="Search foods..." [(ngModel)]="food"
+        (keyup.enter)="searchFoods(food)" name="food">
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <div class="row mb-3 col-md-6 center justify">
+      <div class="col-md-2">
+        <i class="pi pi-angle-left" (click)="switchDayLast()"></i>
+      </div>
+      <div class="col-md-2">{{day}}</div>
+      <div class="col-md-2">
+        <i class="pi pi-angle-right" (click)="switchDayNext()"></i>
+      </div>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>

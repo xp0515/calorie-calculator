@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+}
+
+.mat-toolbar.mat-primary {
+  background: #5408c7;
+  color: #fff;
+}
+
+.center {
+  margin: auto;
+}
+
+.float-left {
+  float: left;
+}
+
+.mat-progress-bar-fill::after {
+  background-color: #5408c7;
+}
+
+.mat-progress-bar-buffer {
+  background-color: orchid !important;
+}
+
+.justify {
+  justify-content: space-between;
+  display: flex;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.grey {
+  color: grey;
+}
+
+.purple {
+  color: violet;
+}
+
+.ui-spinner {
+  bottom: 15px;
+}
+
+.ui-dropdown {
+  bottom: 10px;
+  background-color: grey;
+  width: 130%;
+}
+
+body .ui-button {
+  color: white;
+  background: #5408c7 !important;
+  border: 1px solid #5408c7 !important;
+}
+
+.ui-dropdown .ui-dropdown-label {
+  background: lightgrey !important;
+}
+
+body .ui-inputtext {
+  background: lightgrey;
+}
