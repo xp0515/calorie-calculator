@@ -14,6 +14,7 @@ export class FoodDetailsComponent implements OnInit {
 
   food: Food;
   selectedFood;
+  selectedMeal;
   commonFood;
   brandedFood;
   servings = 1;
@@ -37,9 +38,11 @@ export class FoodDetailsComponent implements OnInit {
     this.selectedFood = data;
     if (data.nix_item_id) {
       this.brandedFood = data;
+      this.brandedFood.serving_unit = this.brandedFood.serving_unit.toString().replace('"', '\\"');
     }
     else {
       this.commonFood = data;
+      this.commonFood.serving_unit = this.commonFood.serving_unit.toString().replace('"', '\\"');
       this.requestBody = '{"query": "1 ' + `${this.commonFood.serving_unit}` + ' ' + `${this.commonFood.food_name}` + '"}';
     }
   }
