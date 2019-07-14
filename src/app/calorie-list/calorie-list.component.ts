@@ -18,7 +18,6 @@ export class CalorieListComponent implements OnInit {
     this.foodsSub = this.foodService.getfoodListUpdatedListener()
       .subscribe((foodList) => {
         this.foodList = foodList;
-        console.log(this.foodList);
       })
   }
 
