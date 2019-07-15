@@ -1,13 +1,13 @@
 <div class="container-fluid" *ngFor="let food of foodList">
-  <div class="row" style="margin: 0 auto;">
-    <div class="col-md-1">
+  <div class="row nowrap" style="margin: 0 auto;">
+    <div class="col-md-1 imgleft">
       <img src="{{food.thumb}}" style="width: 70px; height: 70px;" />
     </div>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <p class="text-left capitalize down">
         <strong> {{food.food_name}} </strong>
       </p>
-      <div class="row">
+      <div class="row nowrap">
         <div class="col-md-1 up grey">
           <p><small>
               {{food.serving_qty}}</small>
@@ -25,7 +25,19 @@
           <div class="col-md-4"></div>
         </div>
       </div>
+    </div> -->
+    <div class="col-md-6 wider" id="down">
+      <p class="text-left capitalize down pleft">
+        <strong> {{food.food_name}} </strong>
+      </p>
+      <div class="row nowrap up grey">
+        <p><small>
+            {{food.serving_qty}} {{food.serving_unit}} ({{food.serving_weight_grams}}g)</small>
+        </p>
+
+      </div>
     </div>
+
     <!-- <div class="col-md-1">
     </div> -->
     <div class="col-md-5">

@@ -1,5 +1,25 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .imgleft {
+    position:relative;
+    left:20px;
+  }
+
+  .wider {
+    width: 400%;
+  }
+
+  #sidebarcontainer {
+    max-height: 420px;
+  }
+}
+
 html, body {
   min-height: 100vh;
   height: auto;
@@ -66,4 +86,13 @@ body .ui-button {
 
 body .ui-inputtext {
   background: lightgrey;
+}
+
+#down {
+  top: 4px;
+}
+
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight, body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+  color: #ffffff;
+  background-color: #5408c7;
 }

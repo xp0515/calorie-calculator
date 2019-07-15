@@ -33,3 +33,7 @@ img {
   position: relative;
   top: 10px;
 }
+
+.pleft {
+  right: 15px;
+}
